@@ -1,57 +1,41 @@
 import React from 'react';
+import ServiceInfo from '../components/ServiceInfo';
+import ServiceItem from '../components/ServiceItem';
 
-function Service () {
+function Service() {
+  const serviceItems = [
+    {
+      title: "Backend Development",
+      description: "Expertise in building robust server-side applications, APIs, and databases using technologies like Node.js, Express, MongoDB, and SQL. Proficient in creating scalable and efficient backend systems."
+    },
+    {
+      title: "Frontend Development",
+      description: "Proficient in modern frontend technologies such as React, HTML5, CSS3, and JavaScript. Skilled in creating responsive and dynamic user interfaces, ensuring a seamless user experience."
+    },
+    {
+      title: "Tutoring",
+      description: "I am a tutor for programming in many languages such as Python, Java, C++, and JavaScript. I can help you with your programming problems."
+    },
+    {
+      title: "Juniors Mentoring",
+      description: "I am a mentor for juniors in programming. I can help you with your programming problems."
+    }
+  ];
+
   return (
     <div className="service-content" id="services">
       <div className="container">
         <div className="row">
           <div className="col-md-4">
-            <div className="left-text">
-              <h4>More About Vanilla</h4>
-              <div className="line-dec"></div>
-              <p>Vanilla is free HTML CSS template with Bootstrap v4.2.1 and you can apply this theme for your sites.
-                Please share our <a rel="nofollow" href="https://templatemo.com">website</a> to your friends or collegues. Thank you.</p>
-              <ul>
-                <li>-  Praesent porta urna id eros</li>
-                <li>-  Curabitur consectetur malesuada</li>
-                <li>-  Nam pretium imperdiet enim</li>
-                <li>-  Sed viverra arcu non nisi efficitur</li>
-              </ul>
-              <div className="primary-button">
-                <a href="#portfolio">Learn More About Us</a>
-              </div>
-            </div>
+            <ServiceInfo />
           </div>
           <div className="col-md-8">
             <div className="row">
-              <div className="col-md-6">
-                <div className="service-item">
-                  <h4>ClassicName Modern Design</h4>
-                  <div className="line-dec"></div>
-                  <p>Sed lacinia ligula est, at venenatis ex iaculis quis. Morbi sollicitudin nulla eget odio pellentesque.</p>
+              {serviceItems.map((item, index) => (
+                <div className="col-md-6" key={index}>
+                  <ServiceItem title={item.title} description={item.description} />
                 </div>
-              </div>
-              <div className="col-md-6">
-                <div className="service-item">
-                  <h4>Unique &amp; Creative Ideas</h4>
-                  <div className="line-dec"></div>
-                  <p>Sed lacinia ligula est, at venenatis ex iaculis quis. Morbi sollicitudin nulla eget odio pellentesque.</p>
-                </div>
-              </div>
-              <div className="col-md-6">
-                <div className="service-item">
-                  <h4>Effective Team Work</h4>
-                  <div className="line-dec"></div>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lacinia ligula est, at venenatis ex iaculis quis.</p>
-                </div>
-              </div>
-              <div className="col-md-6">
-                <div className="service-item">
-                  <h4>Fast Support 24/7</h4>
-                  <div className="line-dec"></div>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lacinia ligula est, at venenatis ex iaculis quis.</p>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </div>

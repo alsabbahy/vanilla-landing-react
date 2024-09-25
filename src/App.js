@@ -1,6 +1,5 @@
 import ContactUs from "./sections/contactUs";
 import Footer from "./components/footer";
-import Header from "./components/header";
 import Home from "./sections/home";
 import Navbar from "./components/navbar";
 import Portofolio from "./sections/portofolio";
@@ -11,7 +10,6 @@ function App () {
   return (
     <>
       <Navbar />
-      <Header />
       <Home />
       <Service />
       <Portofolio />

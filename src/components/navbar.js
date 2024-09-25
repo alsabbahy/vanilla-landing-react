@@ -1,16 +1,31 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import './navbar.css';
 
-function Navbar () {
+function Navbar() {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      setIsScrolled(scrollTop > 0);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <div className="fixed-side-navbar">
-      <ul className="nav flex-column">
-        <li className="nav-item"><a className="nav-link" href="#home"><span>Intro</span></a></li>
-        <li className="nav-item"><a className="nav-link" href="#services"><span>Services</span></a></li>
-        <li className="nav-item"><a className="nav-link" href="#portfolio"><span>Portfolio</span></a></li>
-        <li className="nav-item"><a className="nav-link" href="#our-story"><span>Our Story</span></a></li>
-        <li className="nav-item"><a className="nav-link" href="#contact-us"><span>Contact Us</span></a></li>
-      </ul>
-    </div>
+    <nav className={`navbar ${isScrolled ? 'navbar--scrolled' : ''}`}>
+      <div className="navbar__content">
+        <ul className="nav">
+          <li className="nav-item"><a className="nav-link" href="#home">Intro</a></li>
+          <li className="nav-item"><a className="nav-link" href="#services">Services</a></li>
+          <li className="nav-item"><a className="nav-link" href="#portfolio">Portfolio</a></li>
+          <li className="nav-item"><a className="nav-link" href="#our-story">Our Story</a></li>
+          <li className="nav-item"><a className="nav-link" href="#contact-us">Contact Us</a></li>
+        </ul>
+      </div>
+    </nav>
   );
 }
 

@@ -12,12 +12,12 @@ function Footer () {
             </div>
             <ul>
               <li><a href="https://www.facebook.com/ahmed.alsabbahy"><i className="fa fa-facebook"></i></a></li>
-              <li><a href="https://twitter.com/AhmedAlSabbahy"><i className="fa fa-twitter"></i></a></li>
+              <li><a href="https://x.com/AhmedAlSabbahy"><i className="fa fa-twitter"></i></a></li>
               <li><a href="https://www.linkedin.com/in/ahmedmostafaalsabbahy"><i className="fa fa-linkedin"></i></a></li>
               <li><a href="https://www.github.com/alsabbahy"><i className="fa fa-github"></i></a></li>
               <li><a href="https://www.instagram.com/sabbahy.dev"><i className="fa fa-instagram"></i></a></li>
             </ul>
-            <p>Copyright &copy; { year } Sabbahy.Dev</p>
+            <p>Copyright &copy; { year } Sabbahy.Codes</p>
           </div>
         </div>
       </div>
