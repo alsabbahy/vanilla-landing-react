@@ -1,6 +1,7 @@
 import React from 'react'
 import PortfolioList from '../components/PortfolioList'
 import { portfolioItems } from '../data/portfolioItems'
+import './Portfolio.css'
 
 function Portfolio() {
   return (
@@ -14,10 +15,8 @@ function Portfolio() {
             </div>
           </div>
         </div>
-        <div className="row">
-          <div className="col-md-12">
-            <PortfolioList items={portfolioItems} />
-          </div>
+        <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+          <PortfolioList items={portfolioItems} />
         </div>
       </div>
     </div>

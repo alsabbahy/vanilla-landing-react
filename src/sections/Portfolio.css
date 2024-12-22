@@ -1,0 +1,111 @@
+.section-heading {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.section-heading h2 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.section-heading span {
+  display: block;
+  font-size: 1.2rem;
+  color: #ff7d27;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+}
+
+.portfolio-content {
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 15vh;
+  background-image: url(../../public/img/2nd-section.jpg);
+  background-attachment: fixed;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+}
+
+/* Blur only the background */
+.portfolio-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
+  z-index: 1;
+}
+
+/* Ensure content stays sharp */
+.portfolio-content .container {
+  position: relative;
+  z-index: 2; /* Above the blur overlay */
+  max-width: 1400px; /* Larger max-width for more space */
+  padding: 0 30px;
+}
+
+/* Adjust grid spacing for larger items */
+.row {
+  gap: 30px; /* Equal spacing between items */
+  justify-content: center;
+  margin: 0 -20px; /* Increase grid gutters */
+}
+
+.portfolio-item {
+  background: rgba(20, 20, 20, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1.5rem;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  width: 320px; /* Fixed width for consistency */
+  margin: 0; /* Remove margin since we're using gap */
+}
+
+/* Make images larger */
+.portfolio-item img {
+  width: 100%;
+  aspect-ratio: 4/3; /* Maintain consistent image ratio */
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Larger text */
+.portfolio-info {
+  padding: 1rem 0.5rem;
+  text-align: center;
+}
+
+.portfolio-info h3 {
+  color: #ffffff;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 0.75rem 0;
+  letter-spacing: 0.5px;
+}
+
+.portfolio-info p {
+  color: #ff7d27;
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+/* Stronger hover effect for larger items */
+.portfolio-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
