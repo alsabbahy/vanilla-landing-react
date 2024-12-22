@@ -1,23 +1,23 @@
-import ContactUs from "./sections/contactUs";
-import Footer from "./components/footer";
-import Home from "./sections/home";
-import Navbar from "./components/navbar";
-import Portofolio from "./sections/portofolio";
-import Service from "./sections/service";
-import Story from "./sections/story";
+import ContactUs from './sections/contactUs'
+import Footer from './components/footer'
+import Home from './sections/home'
+import Navbar from './components/navbar'
+import Portfolio from './sections/portfolio'
+import Service from './sections/service'
+import Story from './sections/story'
 
-function App () {
+function App() {
   return (
     <>
       <Navbar />
       <Home />
       <Service />
-      <Portofolio />
+      <Portfolio />
       <Story />
       <ContactUs />
       <Footer />
     </>
-  );
+  )
 }
 
-export default App;
+export default App
